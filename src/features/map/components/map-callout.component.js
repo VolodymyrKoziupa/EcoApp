@@ -10,6 +10,5 @@ export const MapCallout = ({company}) => (
     <>
 <MyText>{company.name}</MyText>
 <MyText>{company.address}</MyText>
-
 </>
 )
