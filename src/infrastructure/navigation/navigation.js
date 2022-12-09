@@ -43,7 +43,7 @@ function CompaniesOverview(){
       color='red' 
       onPress={()=>{
         navigation.navigate('ManageCompany', {
-          companyId: id
+      
       })
       }}/>
     )

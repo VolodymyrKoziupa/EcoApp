@@ -23,11 +23,3 @@ export const companiesTransform =  ({results =[]}) =>{
   return camelize(mappedResults);
 };
 
-// companiesRequest()
-// .then(companiesTransform)
-// .then(transformedResponse => {
-//     console.log(transformedResponse)
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })

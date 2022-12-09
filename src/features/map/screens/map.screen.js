@@ -6,6 +6,7 @@ import { LocationContext } from '../../../services/location/location.context';
 
 import { Search } from '../components/search.component';
 import { MapCallout } from '../components/map-callout.component';
+import { CompaniesContextEdit } from '../../../admin/store/companies-context';
 const Map = styled(MapView)`
 height:100%;
 width: 100%
@@ -15,17 +16,10 @@ width: 100%
 const SomeText = styled.Text``;
 export const MapScreen = ({navigation})=> {
   const {location} = useContext(LocationContext);
-  const {companies = []} = useContext(CompaniesContext);
+  const {companies = []} = useContext(CompaniesContextEdit);
   const [latDelta, setLatDelta] = useState(0);
   const { lat, lng, viewport } = location;
 
-  useEffect(() => {
-    const northeastLat = viewport.northeast.lat;
-    const southwestLat = viewport.southwest.lat;
-
-
-    setLatDelta(northeastLat - southwestLat);
-  }, [location, viewport]);
 
 
 
@@ -42,13 +36,14 @@ export const MapScreen = ({navigation})=> {
         }}
       >
         {companies.map((company) => {
+
           return (
             <Marker
-              key={company.name}
+              key={company.id}
               title={company.name}
               coordinate={{
-                latitude: company.geometry.location.lat,
-                longitude: company.geometry.location.lng,
+            longitude: '32.4244223' ? '32.4244223' : 0,
+            latitude: '32.4244223' ? '32.4244223' : 0
               }}
             >
               <Callout

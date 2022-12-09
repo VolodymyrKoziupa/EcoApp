@@ -7,13 +7,16 @@ import { CompaniesContext } from '../../../services/companies/companies.context'
 import { Search } from '../components/search.component';
 import { AppNavigator } from '../../../infrastructure/navigation/app.navigator';
 import { MapScreen } from '../../map/screens/map.screen';
+import { CompaniesContextEdit } from '../../../admin/store/companies-context';
 // const CompanyListContainer = styled.View`
 //   flex: 1;
 //   padding: ${(props) => props.theme.space[3]};
 // `;
 
 export const CompaniesScreen = ({navigation}) => {
-  const {isLoading, companies, error} = useContext(CompaniesContext);
+  // const {isLoading, companies, error} = useContext(CompaniesContext);
+  const {companies} = useContext(CompaniesContextEdit);
+
   return  (
     <SafeArea >
       <Search />
@@ -41,9 +44,7 @@ export const CompaniesScreen = ({navigation}) => {
 
 
       />
-      {/* <CompanyListContainer > */}
 
-      {/* </CompanyListContainer> */}
       
     </SafeArea>
 

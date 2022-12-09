@@ -38,9 +38,8 @@ export const CompaniesInfoCard = ({company = {}}) => {
       <Info>
         <Title>{name}</Title>
         <Title>{address}</Title>
-        <Title>{openingDays}</Title>
-        <Title>{openingHours}</Title>
-        <Title>{rating}</Title>
+    
+ 
 
       </Info>
     </CompanyCard>

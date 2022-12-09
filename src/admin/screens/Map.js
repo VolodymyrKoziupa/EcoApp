@@ -8,8 +8,8 @@ function Map({ navigation }) {
   const [selectedLocation, setSelectedLocation] = useState();
 
   const region = {
-    latitude: 37.78,
-    longitude: -122.43,
+    latitude: 40.665364,
+    longitude: -74.213377,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   };
@@ -63,7 +63,9 @@ function Map({ navigation }) {
             longitude: selectedLocation.lng,
           }}
         />
+        
       )}
+       
     </MapView>
   );
 }

@@ -4,6 +4,8 @@ import { Entypo, FontAwesome, Fontisto, Ionicons } from '@expo/vector-icons';
 
 // TODO: replace to backend URL
 export const BASE_URL = 'https://637e5719cfdbfd9a63aeea44.mockapi.io/';
+export const GOOGLE_API_KEY = 'AIzaSyD96G_m7mNx6CLpqJFyAtwB5adRA0UrHiU';
+
 
 export const ICONS = [
   {

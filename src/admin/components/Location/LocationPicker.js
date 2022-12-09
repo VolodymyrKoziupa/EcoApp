@@ -21,15 +21,15 @@ function LocationPicker({onPickLocation}) {
   const [locationPermissionInformation, requestPermission] =
     useForegroundPermissions();
 
-  useEffect(() => {
-    if (isFocused && route.params) {
-      const mapPickedLocation = {
-        lat: route.params.pickedLat,
-        lng: route.params.pickedLng,
-      };
-      setPickedLocation(mapPickedLocation);
-    }
-  }, [route, isFocused]);
+    useEffect(() => {
+      if (isFocused && route.params) {
+        const mapPickedLocation = {
+          lat: route.params.pickedLat,
+          lng: route.params.pickedLng,
+        };
+        setPickedLocation(mapPickedLocation);
+      }
+    }, [route, isFocused]);
 
 
 
@@ -37,8 +37,8 @@ function LocationPicker({onPickLocation}) {
       async function handleLocation() {
         if (pickedLocation) {
           const address = await getAddress(
-            pickedLocation.lat,
-            pickedLocation.lng
+            pickedLocation?.lat,
+            pickedLocation?.lng
           );
           onPickLocation({ ...pickedLocation, address: address });
         }
