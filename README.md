@@ -12,11 +12,6 @@ Also you, as a company can promote yourself by creating company profile for user
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
 ### Installing
 
 ```
