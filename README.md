@@ -33,6 +33,8 @@ npm start
 ## Authors
 
 Kristina Salnyk - https://github.com/kristina-salnyk (frontend)
+
 Volodymyr Koziupa - https://github.com/VolodymyrKoziupa (frontend)
+
 Oleksandr Pliuta - https://github.com/OleksandrPliuta (backend)
 
